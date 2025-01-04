@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Box Subscription Form</title>
+    <link href="styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <h1 id="title">Book Box Subscription Form</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/5078/5078755.png" class="center">
+    <p id="description">Fill the form to join the waitlist for the Book Box Subscription</p>
+    <form method="post" action='https://register-demo.freecodecamp.org'>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label">Name: <input id="name" type="text" placeholder="Alice" required /></label>
+        <label id="email-label">Email: <input id="email" type="email" placeholder="alice@wonderland.com" required /></label>
+        <label id="number-label">Age <input id="number" type="number" min="16" max="120" placeholder="16" required /></label>
+        </fieldset>
+<fieldset>
+  <legend>Which genre are you interested in?</legend>
+<select id="dropdown" onchange="if (this.value=='other')   {this.form['other'].style.visibility='visible'}else     {this.form['other'].style.visibility='hidden'};">
+<option value="">Select...</option>
+<option value="ya">Young-Adult</option>
+<option value="fant">Fantasy</option>
+<option value="adult">Adult</option>
+<option value="other">Other</option>
+</select>
+<label id="othergenre">
+<textarea name="other" style="visibility:hidden;" placeholder="Write your favorite genres"></textarea>
+</label>
+
+</fieldset>
+<fieldset>
+          <legend>Type of subscription</legend>
+        <label for="book"><input id="book" name="type-subscription" type="radio" class="inline" value="bookonly" checked /> Book-only</label>
+<br>
+        <label for="box"><input id="box" name="type-subscription" type="radio" class="inline" value="entirebox" />Complete Box</label>
+
+
+</fieldset>
+
+<fieldset>
+  <legend>Where are you located?</legend>
+  <label for="country" required>
+        <input class="inline" id="country" type="checkbox" name="country" value="europe"/> Europe
+        <br>
+        <input class="inline" id="country" type="checkbox" name="country" value="usa"/> USA
+       <br>
+        <input class="inline" id="country" type="checkbox" name="country" value="restoftheworld"/> Rest of the World
+      </label>
+
+      </fieldset>
+
+       <input id="submit" type="submit" value="Submit" />
+</form>
+    </body>
+    </html>
